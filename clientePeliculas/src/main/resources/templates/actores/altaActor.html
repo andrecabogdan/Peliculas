@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>PeliculasApp | Aplicación de gestión de peliculas</title>
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="container">
+            <h2 th:text="${titulo}"
+                class="text-secondary border border-success border-top-0 border-left-0 border-right-0"></h2>
+            <form th:action="@{/cactores/guardar/}" method="post" th:object="${actor}">
+                <div th:if="${#fields.hasErrors('*')}" class='alert alert-danger' role='alert'>
+                    Por favor corrija los siguientes errores:
+                    <ul>
+                        <li th:each="err : ${#fields.errors('*')}" th:text="${err}"/>
+                    </ul>
+                </div>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" th:field="*{nombre}" id="nombre" name="nombre"
+                           placeholder="Escriba el nombre del actor" required="required">
+                </div>
+                <div class="mb-3">
+                    <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
+                    <input type="text" class="form-control" th:field="*{fechaNacimiento}" id="fechaNacimiento" name="fechaNacimiento"
+                           placeholder="Escriba la fecha de nacimiento" required="required">
+                </div>
+                <div class="mb-3">
+                    <label for="paisNacimiento" class="form-label">Pais de nacimiento</label>
+                    <input type="text" class="form-control" th:field="*{paisNacimiento}" id="paisNacimiento" name="paisNacimiento"
+                           placeholder="Escriba el pais de nacimiento" required="required">
+                </div>
+                <button type="submit" class="btn btn-dark">Alta</button>
+                <input type="hidden" th:field="*{identificador}" />
+            </form>
+            <hr>
+            <a class="btn btn-primary" role="button" th:href="@{/cactores/}">Ir a Inicio</a>
+        </div>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+
+    </body>
+</html>

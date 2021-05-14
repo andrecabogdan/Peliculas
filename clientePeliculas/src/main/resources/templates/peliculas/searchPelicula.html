@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>PeliculasApp | Aplicación de gestión de peliculas</title>
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="text-secondary border border-success border-top-0 border-left-0 border-right-0">Búsqueda de Peliculas</h2>
+            <form th:action="@{/ppeliculas/titulo}" method="get">
+                <div class="mb-3">
+                    <label for="titulo" class="form-label">Titulo</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo"
+                           placeholder="Escriba el título de la pelicula">
+                </div>
+                <button type="submit" class="btn btn-primary">Buscar por Título</button>
+            </form>
+            <hr>
+            <form th:action="@{/ppeliculas/genero}" method="get">
+                <div class="mb-3">
+                    <label for="genero" class="form-label">Genero</label>
+                    <input type="text" class="form-control" id="genero" name="genero"
+                           placeholder="Escriba el género de la pelicula">
+                </div>
+                <button type="submit" class="btn btn-primary">Buscar por Género</button>
+            </form>
+            <hr>
+            <a class="btn btn-primary" role="button" th:href="@{/ppeliculas}">Ir a Inicio</a>
+        </div>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+
+    </body>
+</html>

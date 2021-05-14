@@ -1,0 +1,27 @@
+DELETE FROM `peliculasactoresdb`.`peliculas_has_actores`;
+DELETE FROM `peliculasactoresdb`.`peliculas`;
+DELETE FROM `peliculasactoresdb`.`actores`;
+
+ALTER TABLE `peliculasactoresdb`.`peliculas` AUTO_INCREMENT = 1 ;
+INSERT INTO `peliculasactoresdb`.`peliculas` VALUES (1,'El señor de los anillos: La comunidad del anillo', 2001, 180, 'Nueva Zelanda', 'Peter Jackson', 'Aventuras','En la Tierra Media, el Señor Oscuro Sauron ordenó a los Elfos que forjaran los Grandes Anillos de Poder. Tres para los reyes Elfos, siete para los Señores Enanos, y nueve para los Hombres Mortales. Pero Saurón también forjó, en secreto, el Anillo Único, que tiene el poder de esclavizar toda la Tierra Media. Con la ayuda de sus amigos y de valientes aliados, el joven hobbit Frodo emprende un peligroso viaje con la misión de destruir el Anillo Único. Pero el malvado Sauron ordena la persecución del grupo, compuesto por Frodo y sus leales amigos hobbits, un mago, un hombre, un elfo y un enano. La misión es casi suicida pero necesaria, pues si Sauron con su ejército de orcos lograra recuperar el Anillo, sería el final de la Tierra Media.','imagen1');
+INSERT INTO `peliculasactoresdb`.`peliculas` VALUES (2,'Interstellar', 2014, 169, 'Estados Unidos', 'Christopher Nolan', 'Ciencia ficción','Al ver que la vida en la Tierra está llegando a su fin, un grupo de exploradores dirigidos por el piloto Cooper (McConaughey) y la científica Amelia (Hathaway) emprende una misión que puede ser la más importante de la historia de la humanidad: viajar más allá de nuestra galaxia para descubrir algún planeta en otra que pueda garantizar el futuro de la raza humana.','imagen2');
+INSERT INTO `peliculasactoresdb`.`peliculas` VALUES (3,'Harry Potter y la piedra filosofal', 2001, 152, 'Reino Unido', 'Chris Columbus', 'Fantástico','El día en que cumple once años, Harry Potter se entera de que es hijo de dos destacados hechiceros, de los que ha heredado poderes mágicos. En la escuela Hogwarts de Magia y Hechicería, donde se educa con otros niños que también tienen poderes especiales, aprenderá todo lo necesario para ser mago.','imagen3');
+INSERT INTO `peliculasactoresdb`.`peliculas` VALUES (4,'John Wick: Pacto de sangre', 2017, 122, 'Estados Unidos', 'Chad Stahelski', 'Acción','El legendario asesino John Wick (Keanu Reeves) se ve obligado a salir del retiro por un ex-asociado que planea obtener el control de un misterioso grupo internacional de asesinos. Obligado a ayudarlo por un juramento de sangre, John emprende un viaje a Roma lleno de adrenalina estremecedora para pelear contra los asesinos más peligrosos del mundo.','imagen4');
+INSERT INTO `peliculasactoresdb`.`peliculas` VALUES (5,'Vengadores: Infinity War', 2018, 156, 'Estados Unidos', 'Anthony Russo, Joe Russo', 'Ciencia ficción','El todopoderoso Thanos ha despertado con la promesa de arrasar con todo a su paso, portando el Guantelete del Infinito, que le confiere un poder incalculable. Los únicos capaces de pararle los pies son los Vengadores y el resto de superhéroes de la galaxia, que deberán estar dispuestos a sacrificarlo todo por un bien mayor. Capitán América e Ironman deberán limar sus diferencias, Black Panther apoyará con sus tropas desde Wakanda, Thor y los Guardianes de la Galaxia e incluso Spider-Man se unirán antes de que los planes de devastación y ruina pongan fin al universo. ¿Serán capaces de frenar el avance del titán del caos? ','imagen5');
+INSERT INTO `peliculasactoresdb`.`peliculas` VALUES (6,'Saw', 2004, 100, 'Estados Unidos', 'James Wan', 'Terror','Adam se despierta encadenado a un tubo oxidado dentro de una decrépita cámara subterránea. A su lado, hay otra persona encadenada, el Dr. Lawrence Gordon. Entre ellos hay un hombre muerto. Ninguno de los dos sabe por qué está allí, pero tienen un casette con instrucciones para que el Dr. Gordon mate a Adam en un plazo de ocho horas. Recordando una investigación de asesinato llevada a cabo por un detective llamado Tapp, Gordon descubre que él y Adam son victimas de un psicópata conocido como Jigsaw. Sólo disponen de unas horas para desenredar el complicado rompecabezas en el que están inmersos.','imagen6');
+
+ALTER TABLE `peliculasactoresdb`.`actores` AUTO_INCREMENT = 1 ;
+INSERT INTO `peliculasactoresdb`.`actores` VALUES (1, 'Elijah Wood', '28 de enero de 1981','Cedar Rapids, Iowa, Estados Unidos');
+INSERT INTO `peliculasactoresdb`.`actores` VALUES (2, 'Matthew McConaughey', '4 de noviembre de 1969','Queen Charlottes and Chelsea Hospital, Londres, Reino Unido');
+INSERT INTO `peliculasactoresdb`.`actores` VALUES (3, 'Daniel Radcliffe', '23 de julio de 1989','Uvalde, Texas, Estados Unidos');
+INSERT INTO `peliculasactoresdb`.`actores` VALUES (4, 'Keanu Reeves', '2 de septiembre de 1964','Beirut, Líbano');
+INSERT INTO `peliculasactoresdb`.`actores` VALUES (5, 'Robert Downey Jr.', '4 de abril de 1965','Manhattan, Nueva York, Estados Unidos');
+INSERT INTO `peliculasactoresdb`.`actores` VALUES (6, 'Cary Elwes', ' 26 de octubre de 1962','Westminster, Londres, Reino Unido');
+
+
+INSERT INTO `peliculasactoresdb`.`peliculas_has_actores` VALUES (1, 1);
+INSERT INTO `peliculasactoresdb`.`peliculas_has_actores` VALUES (2, 2);
+INSERT INTO `peliculasactoresdb`.`peliculas_has_actores` VALUES (3, 3);
+INSERT INTO `peliculasactoresdb`.`peliculas_has_actores` VALUES (4, 4);
+INSERT INTO `peliculasactoresdb`.`peliculas_has_actores` VALUES (5, 5);
+INSERT INTO `peliculasactoresdb`.`peliculas_has_actores` VALUES (6, 6);
